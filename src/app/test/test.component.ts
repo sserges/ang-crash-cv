@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: '[app-test]',
-  template: ` <div>Inline template</div> `,
+  templateUrl: './test.component.html',
   styles: [
     `
       div {
@@ -12,7 +12,14 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class TestComponent implements OnInit {
+  public name = 'Bro';
+  public siteUrl = window.location.href;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  greetUser() {
+    return 'Hello ' + this.name;
+  }
 }
