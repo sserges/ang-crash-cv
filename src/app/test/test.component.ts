@@ -24,13 +24,20 @@ export class TestComponent implements OnInit {
   public isDisabled = true;
   public successClass = 'text-success';
 
-  public hasError = true;
+  public hasError = false;
   public isSpecial = true;
+
+  public highlightColor = 'orange';
 
   public messageClasses = {
     'text-success': !this.hasError,
     'text-danger': this.hasError,
     'text-special': this.isSpecial,
+  };
+
+  public titleStyles = {
+    color: 'blue',
+    fontStyle: 'italic',
   };
 
   constructor() {}
