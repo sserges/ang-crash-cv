@@ -5,8 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './test.component.html',
   styles: [
     `
-      div {
+      .text-success {
+        color: green;
+      }
+      .text-danger {
         color: red;
+      }
+      .text-special {
+        font-style: italic;
       }
     `,
   ],
@@ -16,6 +22,16 @@ export class TestComponent implements OnInit {
   public siteUrl = window.location.href;
   public myId = 'testId';
   public isDisabled = true;
+  public successClass = 'text-success';
+
+  public hasError = true;
+  public isSpecial = true;
+
+  public messageClasses = {
+    'text-success': !this.hasError,
+    'text-danger': this.hasError,
+    'text-special': this.isSpecial,
+  };
 
   constructor() {}
 

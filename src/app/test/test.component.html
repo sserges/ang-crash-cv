@@ -1,3 +1,8 @@
 <h2>Welcome {{ name }}</h2>
-<input bind-disabled="isDisabled" [id]="myId" type="text" value="Hector" />
-<input  [id]="myId" type="text" value="Valou" />
+<h2 class="text-success">Code Labs</h2>
+<h2 [class]="successClass">Code labs 2</h2>
+<h2  [class]="successClass" class="text-special">Code labs 3</h2>
+
+<h2 [class.text-danger]="hasError">Code Factory</h2>
+
+<h2 [ngClass]="messageClasses">Code Fact 2</h2>
