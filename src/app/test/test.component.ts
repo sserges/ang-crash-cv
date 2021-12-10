@@ -29,6 +29,8 @@ export class TestComponent implements OnInit {
 
   public highlightColor = 'orange';
 
+  public greeting = '';
+
   public messageClasses = {
     'text-success': !this.hasError,
     'text-danger': this.hasError,
@@ -46,5 +48,10 @@ export class TestComponent implements OnInit {
 
   greetUser() {
     return 'Hello ' + this.name;
+  }
+
+  onClick(event: Event) {
+    console.log(event);
+    this.greeting = event.type;
   }
 }
