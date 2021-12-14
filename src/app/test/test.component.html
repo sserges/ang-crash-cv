@@ -1,3 +1,3 @@
 <h2>Welcome</h2>
-<input #myInput type="text" />
-<button (click)="logMessage(myInput)">Log</button>
+<input [(ngModel)]="name" type="text" />
+{{ name }}
