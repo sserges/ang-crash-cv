@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class TestComponent implements OnInit {
-  public name = '';
+  public displayName = true;
 
   constructor() {}
 
