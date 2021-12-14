@@ -54,4 +54,8 @@ export class TestComponent implements OnInit {
     console.log(event);
     this.greeting = event.type;
   }
+
+  logMessage(value: any) {
+    console.log(value);
+  }
 }
