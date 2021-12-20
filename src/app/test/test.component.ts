@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: '[app-test]',
+  selector: 'app-test',
   templateUrl: './test.component.html',
   styles: [
     `
@@ -18,6 +18,10 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class TestComponent implements OnInit {
+  @Input('parentData') public name: String | undefined;
+
+  @Output() public childEvent = new EventEmitter();
+
   public displayName = true;
 
   public color = 'greene';
@@ -27,4 +31,8 @@ export class TestComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  fireEvent() {
+    this.childEvent.emit('Hey Bro !!!!!!!!!!');
+  }
 }
