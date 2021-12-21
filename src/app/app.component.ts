@@ -9,4 +9,10 @@ export class AppComponent {
   title = 'ang-crash-cv';
   public name = 'Marco';
   public message = 'message';
+  public person = {
+    firstName: 'John',
+    lastName: 'Doe',
+  };
+
+  public date = new Date();
 }
