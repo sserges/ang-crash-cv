@@ -9,7 +9,7 @@ import { IEmployee } from './employee';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private _url: string = '/assets/data/employees1.json';
+  private _url: string = '/assets/data/employees.json';
 
   constructor(private http: HttpClient) {}
 
@@ -20,6 +20,6 @@ export class EmployeeService {
   }
 
   errorHandler(error: HttpErrorResponse) {
-    return throwError(error.message || 'Server Error');
+    return throwError(() => new Error(error.message) || 'Server Error');
   }
 }
